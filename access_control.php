@@ -10,14 +10,14 @@ Author URI: http://extralogical.net/
 
 function access_control() {
 	if (
-		is_user_logged_in()
-		|| function_exists('login_header')
-		|| WP_INSTALLING === true
+		!is_user_logged_in()
+		&& !function_exists('login_header')
+		&& WP_INSTALLING !== true
 	) {
-		return;
-	} else {
 		wp_redirect(get_bloginfo('wpurl') . '/wp-login.php');
 		exit;
+	} else {
+		return;
 	}
 }
 
