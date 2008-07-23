@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Access Control
-Plugin URI:	
+Plugin URI:	http://github.com/ionfish/access_control/
 Description: Only allow logged-in users to view this site.
 Author: Benedict Eastaugh
 Version: 1.0
