@@ -14,7 +14,7 @@ function access_control() {
 		&& !function_exists('login_header')
 		&& WP_INSTALLING !== true
 	) {
-		wp_redirect(get_bloginfo('wpurl') . '/wp-login.php');
+		wp_redirect(site_url('/wp-login.php'));
 		exit;
 	} else {
 		return;
